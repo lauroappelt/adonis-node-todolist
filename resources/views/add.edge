@@ -1,0 +1,22 @@
+@layout('main')
+@section('content')
+<h1>New Task</h1>
+<form action="{{route('/add')}}">
+    <div class="mb3">
+        <label for="">Title</label>
+        <input type="text" class="form-control is-invalid" name="title">
+        <div class="invalid-feedback">
+            error!  
+        </div>
+    </div>
+    <div class="mb3">
+        <label for="">Title</label>
+        <textarea type="name" class="form-control is-invalid" name="body"></textarea>
+        <div class="invalid-feedback">
+            error!  
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">New Task</button>
+</form>
+@endsection
