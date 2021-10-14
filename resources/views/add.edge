@@ -1,7 +1,8 @@
 @layout('main')
 @section('content')
 <h1>New Task</h1>
-<form action="{{route('/add')}}">
+<form action="{{route('/add')}}" method="POST">
+    {{ csrfField() }}
     <div class="mb3">
         <label for="">Title</label>
         <input type="text" class="form-control is-invalid" name="title">
